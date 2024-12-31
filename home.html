@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Status Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hi User, Welcome to</h2>
+        <h1>Loan Status Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="Gender">Gender:</label>
+            <select id="Gender" name="Gender" required>
+                <option value="select">Select</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+
+            <label for="Married">Married:</label>
+            <select id="Married" name="Married" required>
+                <option value="select">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="Dependents">Dependents:</label>
+            <input type="text" id="Dependents" name="Dependents" required>
+
+            <label for="Education">Education:</label>
+            <select id="Education" name="Education" required>
+                <option value="select">Select</option>
+                <option value="1">Graduate</option>
+                <option value="0">Not Graduate</option>
+            </select>
+
+            <label for="Self_Employed">Self Employed:</label>
+            <select id="Self_Employed" name="Self_Employed" required>
+                <option value="select">Select</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="ApplicantIncome">Applicant Income:</label>
+            <input type="text" id="ApplicantIncome" name="ApplicantIncome" required>
+
+            <label for="CoapplicantIncome">Coapplicant Income:</label>
+            <input type="text" id="CoapplicantIncome" name="CoapplicantIncome" required>
+
+            <label for="LoanAmount">Loan Amount:</label>
+            <input type="text" id="LoanAmount" name="LoanAmount" required>
+
+            <label for="Loan_Amount_Term">Loan Amount Term:</label>
+            <input type="text" id="Loan_Amount_Term" name="Loan_Amount_Term" required>
+
+            <label for="Credit_History">Credit History:</label>
+            <select id="Credit_History" name="Credit_History" required>
+                <option value="select">Select</option>
+                <option value="1">1</option>
+                <option value="0">0</option>
+            </select>
+
+            <label for="Property_Area">Property Area:</label>
+            <select id="Property_Area" name="Property_Area" required>
+                <option value="select">Select</option>
+                <option value="2">Urban</option>
+                <option value="1">Semiurban</option>
+                <option value="0">Rural</option>
+            </select>
+
+            <button type="submit">Predict Loan</button>
+        </form>
+        <div class="footer">
+            <p>Need help? <a href="#">Contact Support</a></p>
+        </div>
+    </div>
+</body>
+</html>
