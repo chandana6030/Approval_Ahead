@@ -1,2 +1,2 @@
-#Approval Ahead  
+Approval Ahead  
 This project is a loan status prediction system designed to analyze an applicant's historical data and various attributes. By leveraging advanced machine learning technique, the system provides an insightful prediction on whether the loan application is likely to be approved. This tool helps users gain prior knowledge about their chances of approval, enabling them to make informed financial decisions.
